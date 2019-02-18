@@ -1,0 +1,342 @@
+@import url(fontiran.css);
+
+/* Font */
+
+body {
+    font-family: IRANSans !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+    font-family: IRANSans !important;
+}
+
+.navbar,
+.sidebar,
+.loader,
+.content {
+    font-family: IRANSans !important;
+}
+
+
+/* Search Bar  */
+
+.search-bar {
+    direction: rtl;
+}
+
+.search-bar .search-icon {
+    right: 14px;
+    left: unset;
+}
+
+.search-bar .close-search {
+    left: 18px;
+    right: unset;
+}
+
+
+/* Top Bar */
+
+.navbar {
+    direction: rtl;
+    right: 0;
+    left: unset;
+}
+
+@media (min-width: 768px) {
+    .navbar-header {
+        float: right;
+    }
+}
+
+.navbar-header .bars {
+    float: right;
+    margin-left: 10px;
+}
+
+.ls-closed .bars:after,
+.ls-closed .bars:before {
+    right: 20px;
+    left: unset;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1169px) and (min-width: 992px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-right: 35px;
+        margin-left: 0;
+    }
+}
+
+.navbar .navbar-toggle {
+    margin-left: 10px;
+    margin-right: 0;
+    float: left;
+    left: 20px;
+}
+
+@media (max-width: 767px) {
+    .navbar .navbar-header {
+        margin-bottom: 0;
+    }
+}
+
+.ls-closed .bars:after {
+    content: '\E5C8'
+}
+
+.navbar-nav>li {
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .navbar .navbar-nav {
+        float: left;
+    }
+}
+
+
+/* */
+
+.dropdown-menu ul.menu {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    text-align: right;
+}
+
+.dropdown-menu ul.menu .menu-info {
+    right: 5px;
+    left: unset;
+}
+
+
+/* Left SideBar */
+
+.right-sidebar {
+    left: -300px;
+    right: 0;
+}
+
+.right-sidebar.open {
+    left: 0;
+    right: auto;
+}
+
+
+/* Main Sidebar */
+
+.sidebar {
+    right: 0;
+    left: unset;
+    direction: rtl;
+}
+
+.ls-closed .sidebar {
+    margin-left: 0;
+    margin-right: -300px;
+}
+
+.overlay-open .sidebar {
+    margin-right: 0;
+    z-index: 99999999;
+}
+
+.sidebar .user-info .info-container .user-helper-dropdown {
+    left: -3px;
+    right: auto;
+}
+
+.sidebar .user-info .image {
+    visibility: hidden;
+}
+
+.sidebar .menu .list a span {
+    margin-left: 0;
+    margin-right: 12px;
+}
+
+.sidebar .menu .list .menu-toggle:after,
+.sidebar .menu .list .menu-toggle:before {
+    left: 17px;
+    right: auto;
+}
+
+.legal {
+    direction: ltr;
+}
+
+
+/* Page Loader */
+
+.page-loader-wrapper p {
+    direction: rtl;
+}
+
+
+/* Section Main */
+
+section.content {
+    margin: 100px 315px 0 15px;
+}
+
+.ls-closed section.content {
+    margin-right: 15px;
+}
+
+.block-header h2 {
+    direction: rtl;
+}
+
+ul.list {
+    -webkit-padding-start: 0px;
+}
+
+
+/* Info Boxes Widget*/
+
+.info-box,
+.info-box-1,
+.info-box-2,
+.info-box-3,
+.info-box-4 {
+    direction: rtl;
+}
+
+.info-box.hover-expand-effect:after,
+.info-box-1.hover-expand-effect:after,
+.info-box-2.hover-expand-effect:after,
+.info-box-3.hover-expand-effect:after,
+.info-box-4.hover-expand-effect:after
+{
+    right: 80px;
+    left: unset;
+}
+
+.info-box .content,
+.info-box-4 .content {
+    text-align: right;
+}
+
+
+/**/
+
+.dropdown-menu>li>a {
+    text-align: right;
+}
+
+.dropdown-menu>li>a i.material-icons {
+    float: right;
+    margin-left: 7px;
+    margin-right: 0;
+}
+
+
+/* boxes */
+
+.login-box,
+.fp-box {
+    direction: rtl;
+}
+
+
+/* Login Page */
+
+.input-group .input-group-addon {
+    padding-left: 12px;
+    padding-right: 0;
+}
+
+[type="checkbox"]+label:after {
+    float: right;
+    right: 0;
+    left: auto;
+}
+
+[type="checkbox"]+label {
+    padding-left: 0;
+    padding-right: 26px;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+    right: 0px;
+    left: auto;
+}
+
+[type="checkbox"].filled-in:checked+label:before {
+    right: 10px;
+    left: auto;
+}
+
+
+/* Table */
+
+table {
+    direction: rtl;
+}
+
+th {
+    text-align: right;
+}
+
+
+/* Card */
+
+.card {
+    direction: rtl;
+}
+
+.card .header .header-dropdown {
+    left: 15px;
+    right: unset;
+}
+
+
+/* Data Table */
+
+.dataTables_length,
+.dataTables_info {
+    float: left;
+}
+
+.pagination li {
+    float: right;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    -webkit-padding-start: 0px;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-top: 15px !important;
+}
+.sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle):before{
+    content: '\E314';
+}
