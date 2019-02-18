@@ -1,4 +1,5 @@
 $(function () {
+    loadTheme();
     skinChanger();
     activateNotificationAndTasksScroll();
 
@@ -9,19 +10,42 @@ $(function () {
         setSettingListHeightAndScroll(false);
     });
 });
+function loadTheme(){
+    var $body = $('body');
+    var $breadCrumbs = Array.from($('.breadcrumb'));
+    var $theme = localStorage.getItem('theme') || 'red';
 
+    var existTheme = $('.right-sidebar .demo-choose-skin li.active').data('theme');
+    $('.right-sidebar .demo-choose-skin li').removeClass('active');
+    $body.removeClass('theme-' + existTheme);
+    $breadCrumbs.forEach((bread)=>{
+        var $bread = $(bread)
+        $bread.removeClass('breadcrumb-bg-' + existTheme);
+        $bread.addClass('breadcrumb-bg-' + $theme);
+    })
+    $(`.right-sidebar .demo-choose-skin li[data-theme=${$theme}]`).addClass('active');;
+    $body.addClass('theme-' + $theme);
+}
 //Skin changer
 function skinChanger() {
     $('.right-sidebar .demo-choose-skin li').on('click', function () {
         var $body = $('body');
+        var $breadCrumbs = Array.from($('.breadcrumb'));
         var $this = $(this);
 
         var existTheme = $('.right-sidebar .demo-choose-skin li.active').data('theme');
         $('.right-sidebar .demo-choose-skin li').removeClass('active');
         $body.removeClass('theme-' + existTheme);
+        $breadCrumbs.forEach((bread)=>{
+            var $bread = $(bread)
+            $bread.removeClass('breadcrumb-bg-' + existTheme);
+            $bread.addClass('breadcrumb-bg-' + $this.data('theme'));
+        })
         $this.addClass('active');
 
         $body.addClass('theme-' + $this.data('theme'));
+
+        localStorage.setItem('theme',$this.data('theme'));
     });
 }
 
