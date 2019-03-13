@@ -1,7 +1,18 @@
-@import url(fontiran.css);
-
 /* Font */
-
+@import url(fontiran.css);
+/* */
+.rtl{
+    direction: rtl;
+}
+.ltr{
+    direction: ltr;
+}
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{
+    float: right;
+}
 body {
     font-family: IRANSans !important;
 }
@@ -137,12 +148,15 @@ textarea {
     left: unset;
 }
 
-
+.dropdown-menu.dropdown-menu-left{
+    left: unset;
+    right: 0;
+}
 /* Left SideBar */
 
 .right-sidebar {
     left: -300px;
-    right: 0;
+    right: unset;
 }
 
 .right-sidebar.open {
@@ -245,6 +259,11 @@ ul.list {
     text-align: right;
 }
 
+.info-box-3 .icon,
+.info-box-4 .icon{
+    left: 10px;
+    right: unset;
+}
 
 /**/
 
@@ -330,6 +349,10 @@ th {
     float: right;
 }
 
+.nav-tabs > li{
+    float: right;
+}
+
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     -webkit-padding-start: 0px;
 }
@@ -337,6 +360,65 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .navbar-nav .dropdown-menu {
     margin-top: 15px !important;
 }
+
+/* Sidebar */
+
 .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle):before{
     content: '\E314';
+}
+
+
+
+.btn-float-b-l{
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+}
+
+/* Radio */
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label{
+    padding-right: 26px;
+    padding-left: unset;
+}
+[type="radio"] + label::before, [type="radio"] + label::after{
+    right: 0;
+    left: unset;
+}
+[type="radio"]:not(:checked), [type="radio"]:checked{
+    right: -9999px;
+    left: unset;
+}
+
+/* Checkbox */
+[type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after{
+    right: 0;
+    left: unset;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked{
+    right: -9999px;
+    left: unset;
+}
+.demo-choose-skin li span{
+    right: 5px;
+    left: unset;
+}
+
+.right-sidebar #settings .setting-list li .switch{
+    left: 5px;
+    right: unset;
+}
+
+.demo-choose-skin li.active:after{
+    left: 10px;
+    right: unset;
+}
+
+ul{
+    padding-inline-end: 40px;
+    padding-inline-start: unset;
+}
+
+.page-loader-wrapper{
+    direction: ltr !important;
 }
